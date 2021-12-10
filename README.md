@@ -19,10 +19,18 @@ This project incorporates the use of Oracle VM VirtualBox to create an Active Di
 
 ![](images/SS9.png)
 
-**Stage 4:** After RAS and NAT were configured, it was time to move on to setting up DHCP. DHCP is a network  protocol that is used to automatically assign IP addresses to any of the client machines that are connected to the network. To set up DHCP in Active Directory, I went to the roles and features tab and added a DHCP server. Next I set the IP address range to be from 172.16.0.100 to 172.16.0.200. The default gateway was set to the IP address of the domain controller as that is what the client machines would use to connect to the internet.
+**Stage 4:** After RAS and NAT were configured, it was time to move on to setting up DHCP. DHCP is a network  protocol that is used to automatically assign IP addresses to any of the client machines that are connected to the network. To set up DHCP in Active Directory, I went to the roles and features tab and added a DHCP server. Next I set the IP address range to be from 172.16.0.100 to 172.16.0.200. The default gateway was set to the IP address of the domain controller as that is what the client machines would use to connect to the internet. The Domain Controller has two network adapters. One to connect to the internal network which the client machines will also connect to and another one to access the internet. The Domain Controllers job is to forward any traffic from the client machines to the internet.  
 
 ![](images/SS10.png)
 
 ![](images/SS11.png)
 
 ![](images/SS12.png)
+
+**Stage 5:** The next stage involved the PowerShell script. This script was extremely helpful as it automatically generated 100 user accounts which would have taken a long time to do manually. The first part of the script sets important variables such as the passwords that each user would be granted by default. Another variable was used to extract the names of each user from a TXT file. The second part involved converting the default user password to a SecureString. The next line was to create the new organizational unit which would be called users. After this, a for loop was used to loop over each user stored in the $USERLIST object. The split method was used with the correct indexes to extract the first and last names for each user. Then these were used to create a username for each user, aas well as al the other fields that needed to be filled in for each user. Once the script waas finished, I used Windows PowerShell ISE to run the powershell script script and this successfully created all of the users. 
+
+![](images/ScriptSS.png)
+
+![](images/SS14.png)
+
+![](images/SS15.png)
