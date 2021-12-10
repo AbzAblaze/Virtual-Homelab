@@ -4,7 +4,7 @@ $USERLIST = Get-Content .\Users.txt
 # ------------------------------------------------------ #
 
 $password = ConvertTo-SecureString $USERPASSWORDS -AsPlainText -Force
-New-ADOrganizationalUnit -Name _USERS -ProtectedFromAccidentalDeletion $false
+New-ADOrganizationalUnit -Name USERS -ProtectedFromAccidentalDeletion $false
 
 foreach ($n in $USERLIST) {
     $first = $n.Split(" ")[0].ToLower()
