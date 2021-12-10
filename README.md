@@ -12,3 +12,9 @@ This project incorporates the use of Oracle VM VirtualBox to create an Active Di
 ![](images/SS6.png)
 
 ![](images/SS7.png)
+
+**Stage 3:** After the Domain Controller was created, I set up a domain admin account and moved on to configuring the networking for the domain. Two things needed to be configured for this stage: RAS(Removte Access Server) and NAT(Network Address Translation). This would allow the joined Windows 10 machines to be part of the private virtual network as well as access the internet throught the domain controller; the domain controller acting as a router for the client machines. I began by installing a Remote Access Server thorugh the Server Manager. RAS is what allows the connected client machines to connect to the private virtual network remotely. Next, I installed NAT, which made it possible for all of the machines in the network to connect to the internet through a single IP address. 
+
+![](images/SS8.png)
+
+![](images/SS9.png)
