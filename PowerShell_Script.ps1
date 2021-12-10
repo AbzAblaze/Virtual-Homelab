@@ -1,6 +1,6 @@
 ﻿# ----- Variables----- #
 $USERPASSWORDS   = "Password123"
-$USERLIST = Get-Content .\namesfile.txt
+$USERLIST = Get-Content .\Users.txt
 # ------------------------------------------------------ #
 
 $password = ConvertTo-SecureString $USERPASSWORDS -AsPlainText -Force
