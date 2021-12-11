@@ -35,7 +35,7 @@ This project incorporates the use of Oracle VM VirtualBox to create an Active Di
 
 ![](images/SS15.png)
 
-**Stage 5:** Once the domain controller was fully set up and the PowerShell script was run, the next step was to connect a Windows 10 client to the domain. First I created a Windows 10 machines with an ISO. After this I connected it to the domain. After restarting the machine, I tested the connection by pinging the domain, which was successful. Then I checked the internet connection by pinging google.com, and that test was also successful. 
+**Stage 6:** Once the domain controller was fully set up and the PowerShell script was run, the next step was to connect a Windows 10 client to the domain. First I created a Windows 10 machines with an ISO. After this I connected it to the domain. After restarting the machine, I tested the connection by pinging the domain, which was successful. Then I checked the internet connection by pinging google.com, and that test was also successful. 
 
 ![](images/SS16.png)
 
